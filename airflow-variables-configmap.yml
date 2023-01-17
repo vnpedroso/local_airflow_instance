@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: airflow-namespace
+  name: airflow-variables-configmap
+data:
+  AIRFLOW_VAR_DUMMY_VAR: "this is a dummy string"
+  # whatever string comes after "AIRFLOW_VAR_" will be the actual name of the var within your airflow instance

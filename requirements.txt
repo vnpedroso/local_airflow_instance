@@ -1,2 +1,2 @@
+#put here all dependecies for your airflow instance
 apache-airflow-providers-airbyte==3.2.0
-apache-airflow-providers-postgres==5.4.0

@@ -981,7 +981,7 @@ webserver:
   #   CSRF_ENABLED = True
 
   service:
-    type: LoadBalancer
+    type: ClusterIP
     ## service annotations
     annotations: {}
     ports:
@@ -1661,8 +1661,8 @@ cleanup:
 # Not recommended for production
 postgresql:
   enabled: true
-  postgresqlPassword: postgres
-  postgresqlUsername: postgres
+  postgresqlPassword: 
+  postgresqlUsername: 
 
 # Config settings to go into the mounted airflow.cfg
 #
@@ -1848,11 +1848,10 @@ dags:
 logs:
   persistence:
     # Enable persistent volume for storing logs
-    enabled: true
+    enabled: false
     # Volume size for logs
-    size: 100Gi
+    size: 500Mi
     # If using a custom storageClass, pass name here
     storageClassName:
     ## the name of an existing PVC to use
     existingClaim:
-
